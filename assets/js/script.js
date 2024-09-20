@@ -82,13 +82,13 @@ function dailyWeather(UrlArg) {
 
 searchBtn.addEventListener("click", function (event) {
   event.preventDefault();
-  let queryURL = `http://api.openweathermap.org/geo/1.0/direct?q=${searchInput.value}&limit=5&appid=${WeatherAPIKey}`;
+  let queryURL = `https://api.openweathermap.org/geo/1.0/direct?q=${searchInput.value}&limit=5&appid=${WeatherAPIKey}`;
   dailyWeather(queryURL);
 });
 
 presetBtn.forEach(button => {
   button.addEventListener('click',function(){
-    let queryURL = `http://api.openweathermap.org/geo/1.0/direct?q=${button.textContent}&limit=5&appid=${WeatherAPIKey}`;
+    let queryURL = `https://api.openweathermap.org/geo/1.0/direct?q=${button.textContent}&limit=5&appid=${WeatherAPIKey}`;
     dailyWeather(queryURL);
   })
 })
